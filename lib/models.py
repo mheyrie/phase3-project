@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
-
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, DateTime, create_engine, ForeignKey
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+
+
+
 
 Base = declarative_base()
 
@@ -28,6 +30,9 @@ class Owner(Base):
             f"{self.first_name}, " + \
             f"{self.last_name}, " + \
             f"{self.phone_no}"
+    
+    def full_name(self):
+        return f"Fullname: {self.first_name} {self.last_name}"
 
 
 

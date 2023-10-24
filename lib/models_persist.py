@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from datetime import datetime
 from models import Owner, Car, engine
 from sqlalchemy.orm import sessionmaker
