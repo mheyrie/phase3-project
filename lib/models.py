@@ -7,7 +7,6 @@ from sqlalchemy.orm import relationship, sessionmaker, declarative_base
 
 
 
-
 Base = declarative_base()
 
 class Owner(Base):
@@ -41,7 +40,7 @@ class Car(Base):
     car_brand = Column(String, nullable=False)
     color = Column(String, nullable=True)
     production_year = Column(Integer, nullable=False)
-    plate_no = Column(Integer, nullable=True)
+    plate_no = Column(String, nullable=True)
     created = Column(DateTime, default=datetime.utcnow)
         
     owner_id = Column(Integer, ForeignKey('owners.id'), nullable=False)
